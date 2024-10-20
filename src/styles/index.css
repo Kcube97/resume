@@ -1,0 +1,158 @@
+.body {
+  background-color: #b16969;
+}
+
+.link {
+  text-decoration: none;
+  color: #444444;
+  font-weight:300;
+}
+
+.link:hover {
+  font-weight: 500;
+}
+
+.main {
+  width: 80vw;
+  min-width: 80vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fafafa;
+  scrollbar-width: none;
+}
+
+.main::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.name {
+  width: 100%;
+  font-size: 3.5rem;
+  height: 3.5rem;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 10px;
+  color: #444444;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.role {
+  width: 100%;
+  font-size: 1rem;
+  height: 1rem;
+  padding: 10px;
+  text-align: center;
+  color: #444444;
+  letter-spacing: 10px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.content {
+  width: 100%;
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: row;
+}
+
+.personal-block {
+  flex: 1 1 150px; /* flex-grow, flex-shrink, flex-basis */
+  min-width: 300px;
+  max-width: 450px;
+  height: auto;
+  background-color: #efefef;
+  padding: 50px;
+  text-align: left;
+}
+
+.work-block {
+  flex: 2 1 150px; /* flex-grow, flex-shrink, flex-basis */
+  min-width: 450px;
+  max-width: 1080px;
+  padding: 50px;
+  text-align: left;
+}
+
+.component {
+}
+
+.title {
+  height: 1.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #444444;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+.sub-title {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  color: #444444;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 300;
+}
+
+.description {
+  margin-top: 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #444444;
+}
+
+.profile {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
+  font-family: "Hanken Grotesk", sans-serif;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #444444;
+  text-align: left;
+}
+
+.divider {
+  width: auto;
+  max-width: auto;
+  margin-top: 25px;
+  color: #444444;
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
+}
+
+.job-position {
+  letter-spacing: 0px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.space-between-row-container {
+  letter-spacing: 0px;
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* This pushes the company to the left and date to the right */
+}
+
+.task-title {
+  font-weight: 500;
+}
