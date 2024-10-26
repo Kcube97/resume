@@ -1,42 +1,24 @@
-# syntax = docker/dockerfile:1
+# Use an official Node.js runtime as a parent image
+FROM node:18
 
-# Adjust NODE_VERSION as desired
-ARG NODE_VERSION=20.18.0
-FROM node:${NODE_VERSION}-slim as base
-
-LABEL fly_launch_runtime="Gatsby"
-
-# Gatsby app lives here
+# Set the working directory in the container
 WORKDIR /app
 
-# Set production environment
-ENV NODE_ENV="production"
+# Copy package.json and package-lock.json into the container
+COPY package*.json ./
 
+# Install project dependencies
+RUN npm install
 
-# Throw-away build stage to reduce size of final image
-FROM base as build
-
-# Install packages needed to build node modules
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
-
-# Install node modules
-COPY package-lock.json package.json ./
-RUN npm ci
-
-# Copy application code
+# Copy the rest of the application code into the container
 COPY . .
 
-# Build application
+# Build the Gatsby site, generating the public folder
 RUN npm run build
 
-
-# Final stage for app image
-FROM base
-
-# Copy built application
-COPY --from=build /app /app
-
-# Start the server by default, this can be overwritten at runtime
+# Expose port 8080
 EXPOSE 8080
-CMD [ "npx", "gatsby", "serve", "-H", "0.0.0.0" ]
+
+# Serve the public folder using a static server
+RUN npm install -g serve
+CMD ["serve", "-s", "public", "-l", "8080"]
