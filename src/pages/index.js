@@ -1,5 +1,9 @@
 import * as React from "react";
-import { FaPhone, FaLinkedin, FaAndroid, FaReact } from "react-icons/fa";
+import {
+  FaPhone,
+  FaLinkedin,
+  FaQuestionCircle,
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import "../styles/index.css";
 
@@ -13,92 +17,6 @@ const IndexPage = () => {
         <div className="role">SOFTWARE ENGINEER</div>
       </div>
       <div className="content">
-        <div id="personal" className="personal-block">
-          <div className="component">
-            <div className="component title">CONTACT</div>
-            <div className="component description">
-              <FaPhone />
-              &nbsp;&nbsp;&nbsp;&nbsp;019 - 425 3029
-            </div>
-            <div className="component description">
-              <MdEmail />
-              &nbsp;&nbsp;&nbsp;&nbsp;koaykeikai97@gmail.com
-            </div>
-            <div className="component description">
-              <FaLinkedin />
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <a
-                href="https://www.linkedin.com/in/koay-kei-kai"
-                target="_blank"
-                className="link"
-              >
-                www.linkedin.com/in/koay-kei-kai
-              </a>
-            </div>
-          </div>
-          <p className="divider">{divider}</p>
-          <div className="component">
-            <div className="component title">TECHNICAL SKILLS</div>
-            <div className="component description">
-              languages: <b>Javascript</b> | <b>Kotlin</b>{" "}
-            </div>
-            <div className="component description">
-              frameworks: <b>React.js</b> | <b>Node.js</b>{" "}
-            </div>
-            <div className="component description">
-              version control: <b>Git</b> | <b>Github</b>{" "}
-            </div>
-            <div className="component description">
-              cloud platform: <b>AWS</b> | <b>Google Cloud Platform</b>{" "}
-            </div>
-            <div className="component description">
-              others: <b>RESTful APIs</b>
-            </div>
-          </div>
-          <p className="divider">{divider}</p>
-          <div className="component">
-            <div className="component title">EDUCATION</div>
-            <div className="component description">
-              Bachelor of Computer Science
-            </div>
-            <div className="component description">
-              Universiti Malaysia Terengganu
-            </div>
-            <div className="component description">2017 - 2020</div>
-            <li className="description" style={{ "margin-top": 0 }}>
-              CGPA: 3.7
-            </li>
-            <li className="description" style={{ "margin-top": 0 }}>
-              Related coursework: Java, OOP, Networking, Software Requirement
-              Engineering
-            </li>
-          </div>
-          <p className="divider">{divider}</p>
-          <div className="component">
-            <div className="component title">LANGUAGES</div>
-            <div
-              className="component space-between-row-container description"
-              style={{ marginTop: 20 }}
-            >
-              <div>English</div>
-              <div style={{ fontWeight: 400 }}>Upper-Intermediate</div>
-            </div>
-            <div
-              className="component space-between-row-container description"
-              style={{ "margin-top": 20 }}
-            >
-              <div>Madarine</div>
-              <div style={{ fontWeight: 400 }}>Advance</div>
-            </div>
-            <div
-              className="component space-between-row-container description"
-              style={{ "margin-top": 20 }}
-            >
-              <div>Malay</div>
-              <div style={{ fontWeight: 400 }}>Intermediate</div>
-            </div>
-          </div>
-        </div>
         <div id="work" className="work-block">
           <div className="component" id="profile">
             <div className="component title">PROFILE</div>
@@ -133,7 +51,7 @@ const IndexPage = () => {
               </div>
               <div className="component job-details">
                 <div className="componenet description task-title" id="duties">
-                  Responsiblities && Duties
+                  Responsiblities & Duties
                   <div className="description">Development</div>
                   <li className="description" style={{ "margin-top": 0 }}>
                     Develop modules or functions for the existing systems to
@@ -237,6 +155,110 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
+        <div id="personal" className="personal-block">
+          <div className="component">
+            <div className="component title">
+              CONTACT{" "}
+              <div class="tooltip-container">
+                <FaQuestionCircle className="faQuestionCircle" />
+                <div class="tooltip-dialog" id="tooltip-dialog">
+                  Feel free to click the options below to contact me.
+                </div>
+              </div>
+            </div>
+            <div className="component description">
+              <FaPhone />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a
+                href="https://wa.me/194253029"
+                target="_blank"
+                className="link"
+              >
+                019 - 425 3029
+              </a>
+            </div>
+            <div className="component description">
+              <MdEmail />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="mailto:koaykeikai97@gmail.com" className="link">
+                koaykeikai97@gmail.com
+              </a>
+            </div>
+            <div className="component description">
+              <FaLinkedin />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a
+                href="https://www.linkedin.com/in/koay-kei-kai"
+                target="_blank"
+                className="link"
+              >
+                www.linkedin.com/in/koay-kei-kai
+              </a>
+            </div>
+          </div>
+          <p className="divider">{divider}</p>
+          <div className="component">
+            <div className="component title">TECHNICAL SKILLS</div>
+            <div className="component description">
+              languages: <b>Javascript</b> | <b>Kotlin</b>{" "}
+            </div>
+            <div className="component description">
+              frameworks: <b>React.js</b> | <b>Node.js</b>{" "}
+            </div>
+            <div className="component description">
+              version control: <b>Git</b> | <b>Github</b>{" "}
+            </div>
+            <div className="component description">
+              cloud platform: <b>AWS</b> | <b>Google Cloud Platform</b>{" "}
+            </div>
+            <div className="component description">
+              others: <b>RESTful APIs</b>
+            </div>
+          </div>
+          <p className="divider">{divider}</p>
+          <div className="component">
+            <div className="component title">EDUCATION</div>
+            <div className="component description">
+              Bachelor of Computer Science
+            </div>
+            <div className="component description">
+              Universiti Malaysia Terengganu
+            </div>
+            <div className="component description">2017 - 2020</div>
+            <li className="description" style={{ "margin-top": 0 }}>
+              CGPA: 3.7
+            </li>
+            <li className="description" style={{ "margin-top": 0 }}>
+              Related coursework: Java, OOP, Networking, Software Requirement
+              Engineering
+            </li>
+          </div>
+          <p className="divider">{divider}</p>
+          <div className="component">
+            <div className="component title">LANGUAGES</div>
+            <div
+              className="component space-between-row-container description"
+              style={{ marginTop: 20 }}
+            >
+              <div>English</div>
+              <div style={{ fontWeight: 400 }}>Upper-Intermediate</div>
+            </div>
+            <div
+              className="component space-between-row-container description"
+              style={{ "margin-top": 20 }}
+            >
+              <div>Mandarin</div>
+              <div style={{ fontWeight: 400 }}>Advance</div>
+            </div>
+            <div
+              className="component space-between-row-container description"
+              style={{ "margin-top": 20 }}
+            >
+              <div>Malay</div>
+              <div style={{ fontWeight: 400 }}>Intermediate</div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
@@ -246,7 +268,7 @@ export default IndexPage;
 
 export const Head = () => (
   <>
-    <title>Home Page</title>
+    <title>About Me</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

@@ -1,22 +1,39 @@
-# fly.toml app configuration file generated for kai-resume on 2024-10-20T07:55:17Z
+# fly.toml app configuration file generated for kai-resume on 2024-10-20T16:15:17+08:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'kai-resume'
-primary_region = 'sin'
+app = "kai-resume"
+primary_region = "sin"
 
 [build]
+  command = "gatsby build"
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = 'stop'
+  auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
-  processes = ['app']
+  processes = ["app"]
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.http_checks]]
+    path = "/"
+    protocol = "http"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
+  cpu_kind = "shared"
   cpus = 1
+  memory_mb = 256
