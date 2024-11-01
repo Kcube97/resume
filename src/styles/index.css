@@ -209,7 +209,7 @@ body {
   width: 3rem;
   height: 3rem;
   opacity: 0.5;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   margin: 1rem;
@@ -274,7 +274,7 @@ body {
   .main {
     width: 100vw;
     min-width: 100vw;
-    height: 100vh;
+    height: auto;
     overflow-y: auto;
     overflow-x: auto;
     margin-left: auto;
