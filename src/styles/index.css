@@ -205,6 +205,71 @@ body {
   opacity: 1;
 }
 
+.download-container {
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+  color: #444444;
+  display: inline-block;
+}
+
+.download-icon {
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+  color: #444444;
+}
+
+.download-dialog {
+  visibility:hidden;
+  width: 4rem;
+  background-color: #444444;
+  color: #fff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 155%; /* Position the tooltip above the icon */
+  left: 0%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.download-dialog::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Bottom of the tooltip */
+  left: 55%;
+  font-size: 1rem;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  opacity: 0.75;
+  border-color: #444444 transparent transparent transparent;
+}
+
+.download-container:hover .download-icon {
+  opacity: 0.75;
+}
+
+.download-container:hover .download-dialog {
+  visibility: visible;
+  opacity: 0.75;
+}
+
 @media (max-width: 576px) {
   .main {
     width: 100vw;

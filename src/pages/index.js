@@ -1,9 +1,6 @@
 import * as React from "react";
-import {
-  FaPhone,
-  FaLinkedin,
-  FaQuestionCircle,
-} from "react-icons/fa";
+import { FaPhone, FaLinkedin, FaQuestionCircle } from "react-icons/fa";
+import { RiFileDownloadFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import "../styles/index.css";
 
@@ -12,6 +9,17 @@ const IndexPage = () => {
 
   return (
     <main className="main">
+      <a
+        href="/assets/koay_kei_kai_resume.pdf"
+        download="koay_kei_kai_resume.pdf"
+      >
+        <div className="download-container">
+          <RiFileDownloadFill className="download-icon" />
+          <div class="download-dialog" id="download-dialog">
+            Download PDF
+          </div>
+        </div>
+      </a>
       <div className="header">
         <div className="name">KOAY KEI KAI</div>
         <div className="role">SOFTWARE ENGINEER</div>
