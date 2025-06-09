@@ -12,7 +12,8 @@
     "start": "gatsby develop --port 8888",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "fly deploy"
   },
   "dependencies": {
     "gatsby": "^5.13.7",

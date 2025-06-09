@@ -29,15 +29,13 @@ const IndexPage = () => {
           <div className="component" id="profile">
             <div className="component title">PROFILE</div>
             <div className="component description profile">
-              &nbsp;&nbsp;A responsible and enthusiastic full-stack developer
-              with the ability to work independently and collaborative. I have a
-              strong foundation in both front-end and back-end, including
-              development, integration, and debugging across diverse platforms.
-              In additional to technical expertise, my three years working
-              experience taught me to effectively organize my tasks and dedicate
-              in writing a concise, ease-to-read and reuseable code. I am also
-              constantly self-educating to keep up with the era of artificial
-              intelligence.
+              Software engineer with 4+ years of experience in developing
+              optimized Android apps, web-based solutions, and cloud-based IoT
+              systems. Skilled in AWS services (Lambda, SQS, Docker, Elastic
+              Beanstalk, CloudWatch, RDS) and integrating third- party services
+              such as AFA, GHL, and multiple digital wallets. Skillfully traced
+              and resolved software-related errors, reducing transaction
+              failures caused by software issues by 99%.
             </div>
           </div>
           <p className="divider">{divider}</p>
@@ -55,7 +53,7 @@ const IndexPage = () => {
                 >
                   Vechnology Sdn. Bhd.
                 </a>
-                <div>2020 - Now</div>
+                <div>2020 - Current</div>
               </div>
               <div className="component job-details">
                 <div className="componenet description task-title" id="duties">
